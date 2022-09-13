@@ -1,0 +1,33 @@
+@layout('layouts/main')
+
+@section('body')
+    <div class="health">
+      <p>Etat de santé du système : </p>
+      @if(health)
+        <p class="good"> Tout est ok !!</p>
+      @else
+        <p class="bad"> Mauvais !!</p>
+      @endif
+    </div>
+
+    <a href="/" class="nav-link px-2 link-dark">Retour</a>
+
+<style>
+    .health{
+        text-align: center;
+    }
+
+    .good{
+        color: green;
+        margin-top: 10px;
+    }
+
+    .bad {
+        color:red;
+        margin-top: 10px;
+}
+  </style>
+
+@endsection
+
+
